@@ -1,6 +1,6 @@
 module.exports = async (req, res) => {
   try {
-    const url = "https://meteto.ciclofp.es/dpl/";
+    const url = "https://meteo.ciclofp.es/dpl/";
 
     const respuesta = await fetch(url);
 
