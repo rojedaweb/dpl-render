@@ -1,9 +1,6 @@
 module.exports = async (req, res) => {
   try {
-    const url = "https://api.open-meteo.com/v1/forecast"
-      + "?latitude=28.1235&longitude=-15.4363"
-      + "&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
-      + "&timezone=Atlantic%2FCanary";
+    const url = "https://meteto.ciclofp.es/dpl/";
 
     const respuesta = await fetch(url);
 
