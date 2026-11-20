@@ -8,7 +8,11 @@ module.exports = async (req, res) => {
     const respuesta = await fetch(url);
 
     if (!respuesta.ok) {
-      throw new Error("Error al consultar Open-Meteo");
+      const detalle = await respuesta.text();
+
+      throw new Error(
+        `Open-Meteo: HTTP ${respuesta.status} - ${detalle}`
+      );
     }
 
     const datos = await respuesta.json();
